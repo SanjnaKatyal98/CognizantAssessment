@@ -1,0 +1,45 @@
+<html>
+    <head> 
+        <title>Nested Tables</title>
+        <style>
+            th,td{
+                border: 1px solid black;
+            }
+            #mainTable{
+                padding: 1px;
+                margin: 1px;
+            }
+        </style>
+    </head>
+    <body> 
+        <table id="mainTable" border="3" bordercolor="red">   
+            <tr>  
+                <td>Zone</td>  
+                <td>State</td>
+            </tr>
+            <tr>
+                <td>South</td>
+                <td>
+                    <table border="3" bordercolor="green">
+                        <tr>
+                            <td>Name</td>
+                            <td>Capital City</td>
+                        </tr>
+                        <tr>
+                            <td>Karnataka</td>
+                            <td>Banglore</td>
+                        </tr>
+                        <tr>
+                            <td>Tamilnadu</td>
+                            <td>Chennai</td>
+                        </tr>
+                        <tr>
+                            <td>Andhra Pradesh</td>
+                            <td>Hyderabad</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr> 
+        </table>
+    </body>
+</html>
