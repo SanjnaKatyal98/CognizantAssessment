@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            table,td{
+                border: 1px solid black;
+                padding: 10px;
+                margin: 10px;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="table1">
+            <tr>
+                <td>sno</td>
+                <td>title</td>
+                <td>id</td>
+                <td>op</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>sanjna</td>
+                <td>98</td>
+                <td><input type="button" value="Delete" onclick="deleteRow(this)" style="background-color: red;"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>shahid</td>
+                <td>28</td>
+                <td><input type="button" value="Delete" onclick="deleteRow(this)" style="background-color: red;"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>temp</td>
+                <td>0</td>
+                <td><input type="button" value="Delete" onclick="deleteRow(this)" style="background-color: red;"></td>
+            </tr>
+        </table>
+        <br><br><input type="button" value="full delete" onclick="deleteRows(this)">
+        <script>
+            function deleteRow(r) {
+                var i = r.parentNode.parentNode.rowIndex;
+                document.getElementById("table1").deleteRow(i);
+            }
+            function deleteRows(r) {
+                var i = r.parentNode.parentNode.rowIndex;
+                document.getElementById("table1").deleteRow(i);
+            }
+        </script>
+    </body>
+</html>
