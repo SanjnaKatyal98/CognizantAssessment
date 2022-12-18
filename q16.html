@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Nested Flex</title>
+        <style>
+            h1{
+                text-align: center;
+                padding: 10px;
+                margin: 5px;
+                background-color: purple;
+                text-align: center;
+                color:white;
+            }
+            .container{
+                display: flex;
+            }
+            .container p{
+                font-weight: bold;
+            }
+            .one{
+                background-color: aqua;
+                flex: 80%;
+                margin: 10px;
+                padding: 25px;
+            }
+            .two{
+                background-color: aqua;
+            flex: 80%;
+                margin: 10px;
+                padding: 25px;
+            }
+            .three{
+                margin: 10px;
+                background-color: aqua;
+                padding: 25px;
+            }
+            .container1{
+                display: flex;
+            }
+            .btn{
+                margin: 20px;
+                flex: 33%;
+            }
+            .btn1{
+                margin: 5px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Complex flex layout</h1>
+        <div class="container">
+            <div class="one">
+              <h3>First Article</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="two">
+              <h3>Second Article</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="three">
+              <div class="container1">
+                <button class="btn">Smile</button>
+                <button class="btn">Laugh</button>
+                <button class="btn">Wink</button>
+                <button class="btn">Shrug</button>
+              </div>
+              <div class="container2">
+                <button class="btn1">Biush</button>
+              </div>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+          </div>
+    </body>
+</html>
