@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <style>
+            h1{
+                color: green;
+                text-align: center  ;
+            }
+            table,td{
+
+                border: 1px solid black;
+                padding: 10px;
+                margin: 10px;
+                background-color: green;
+                color: white;
+            }
+        </style>
+        <title>Table Delete</title>
+    </head>
+    <body>
+    <center>
+        <table id="table1">
+            <tr>
+                <td>sno</td>
+                <td>title</td>
+                <td>id</td>
+                <td>op</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Sanjna</td>
+                <td>98</td>
+                <td><input type="button" value="Delete" onclick="deleteRow(this)" style="background-color: red;"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Shahid</td>
+                <td>28</td>
+                <td><input type="button" value="Delete" onclick="deleteRow(this)" style="background-color: red;"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>temp</td>
+                <td>0</td>
+                <td><input type="button" value="Delete" onclick="deleteRow(this)" style="background-color: red;"></td>
+            </tr>
+        </table>
+        <br><br><input type="button" value="full delete" onclick="deleteRows()">
+    </center>
+        <script>
+            function deleteRow(r) {
+                var i = r.parentNode.parentNode.rowIndex;
+                document.getElementById("table1").deleteRow(i);
+            }
+            function deleteRows() {
+                $("#table1").detach();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Mumbai Marathon</title>
+        <link rel="stylesheet" href="q1.css">
+    </head>
+    <body>
+        <header>
+            <h1>Mumbai Marathon 2022</h1>
+        </header>
+        <main>
+            <div id="links">
+                <h3>Links</h3>
+                <ul>
+                    <li>Home</li>
+                    <li>Sign up</li>
+                    <li>About the Race</li>
+                </ul>
+            </div>
+
+            <div id="registerForm">
+                <h2>Sign Up Today</h2>
+                <div id="info">
+                    <p><b>Race Fee:</b> 1000 INR</p>
+                    <p>Make a check payable to Happy Marathon Club</p>
+                    <p><b>Note:</b> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a 
+                        piece of classical Latin literature from 45 BC.</p>
+                </div>
+                <br>
+                <form id="form1">
+                    <div class="runnerDetails">
+                        <label for="runner">Runner*</label>
+                        <input type="text" id="runner" maxlength="10" placeholder="First and Last Name" required><br><br>
+                        <label for="tel">Tel* #</label>
+                        <input type="tel" id="tel" placeholder="(xxx) xxx-xxxx" required><br><br>
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="for confirmation only" required><br><br>
+                        <label for="dob">DOB*</label>
+                        <input type="date" id="dob" required><br>
+                    </div>
+                    <br><br>
+                    <div class="tshirtDetails">
+                        <fieldset>
+                            <legend>Tshirt Size</legend>
+                            <label for="small">Small</label>
+                            <input type="radio" id="small" name="size" value="small"><br>
+                            <label for="medium">Medium</label>
+                            <input type="radio" id="medium" name="size" value="medium"><br>
+                            <label for="large">Large</label>
+                            <input type="radio" id="large" name="size" value="large"><br>
+                            <label for="shirtStyle">Shirt Style</label>
+                            <select name="shirtStyle" id="shirtStyle">
+                                <option value="White">White</option>
+                                <option value="Gray">Gray</option>
+                                <option value="Navy Blue">Navy Blue</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <br><br>
+                    <div class="expectations">
+                        <fieldset>
+                            <legend>Expectations</legend>
+                            <label for="confidence">Confidence</label>
+                            <input type="range" name="confidence" id="confidence" min="0" max="100" value="5">
+                            <span id="percent">5 %</span><br><br>
+                            <label for="notes">Notes</label>
+                            <textarea name="notes" id="notes" rows="5" cols="20" maxlength="140" placeholder="  maxlength is 140"></textarea>
+                        </fieldset>
+                    </div>
+                    <br><br>
+                    <div class="submit">
+                        <input type="submit" value="Register" onclick="alert('Registered sucessfully');">
+                    </div>
+                </form>
+            </div>
+
+            <div id="sponsors">
+                <h3>Sponsors</h3>
+                <h4>Happy Marathon Club</h4>
+                <img src="race.jpg" alt="race">
+            </div>
+        </main>
+        <footer>
+            <h5>Powered by MM2022</h5>
+        </footer>
+
+        <script>
+            let span = document.getElementById("percent");
+            let confidence = document.getElementById("confidence");
+            confidence.addEventListener('change', function(){
+                span.innerText = `${confidence.value} %`;
+            });
+        </script>
+    </body>
+</html>

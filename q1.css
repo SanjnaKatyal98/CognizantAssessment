@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header,footer{
+    background-color: #fc6d38;
+    text-align: center;
+    padding: 50px 0px;
+    color: white;
+}
+
+header h1{
+    font-size: 30px;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(186 182 182);
+}
+main>div{
+    margin: 20px;
+}
+
+main #links{
+    width:22%;
+}
+main #links h3{
+    text-align: center;
+    font-size: 23px;
+    color: orangered;
+    margin: 20px;
+}
+main #links li{
+    list-style: none;
+    color: orangered;
+    width: 250px;
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20x;
+    border-bottom: 2px solid white;
+} 
+
+#sponsors{
+    width: 25%;
+    text-align: center;
+}
+#sponsors h3{
+    color: orangered;
+    margin: 20px;
+    font-weight: 700;
+    font-size: 23px;
+}
+#sponsors h4{
+    font-size: 22px;
+    font-style: normal;
+    font-family: sans-serif;
+}
+#sponsors img{
+    height: 200px;
+    width: 180px;
+    margin: 15px;
+}
+
+main #signup-form{
+    width: 36%;
+    background-color: #f1f1f1;
+    z-index: 100;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border-radius: 12px 15px 15px 15px;
+    margin: 20px 100px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+#signup-form form>div{
+    margin-bottom: 30px;
+}
+#signup-form form .runnerDetails label,.tshirtDetails label, .expectations label{
+    display: inline-block;
+    width: 80px;
+    margin: 5px 10px 0px 50px;
+}
+.tshirtDetails fieldset, .expectations fieldset{
+    width:fit-content;
+    margin-left: 40px;
+    padding: 20px 20px 20px 6px;
+}
+
+#signup-form h2{
+    text-align: center;
+    color: #fc6d38;
+}
+
+#signup-form #info{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;   
+}
+#signup-form #info p{
+    margin-bottom: 10px;
+}
+.submit input{
+    margin: 0px 0px 10px 45px;
+    padding: 2px;
+}
+
+@media screen and (max-width: 1200px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main>div{
+        width: 80% !important;
+        margin: 20px;
+    }
+}

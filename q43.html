@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Geo Location</title>
+    </head>
+    <body>
+        <form>
+            First Name: <input type="text" name="fname"/><br><br>
+            Last name: <input type="text" name="lname"/><br><br>
+            Email: <input type="text" name="email"/>
+        </form>
+        <div id="canvas" style="width: 100%; height: 400px;"></div>
+        <script>
+            function getGeolocation(){
+                navigator.geolocation.getCurrentPosition(drawMap);
+            }
+            function drawMap(geoPos) {
+                geolocate = new google.maps.LatLng(geoPos.coords.latitude, geoPos.coords.longitude);
+                let mapProp = {
+                center: geolocate,
+                zoom:5,
+                };
+                let map=new google.maps.Map(document.getElementById('canvas'),mapProp);
+                let infowindow = new google.maps.InfoWindow({
+                    map: map,
+                    position: geolocate,
+                    content:
+                        `Location from HTML5 Geolocation:
+                            <br>Latitude: ${geoPos.coords.latitude}
+                            <br>Longitude: ${geoPos.coords.longitude}`
+                });
+            }
+            getGeolocation();
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    </body>
+</html>
