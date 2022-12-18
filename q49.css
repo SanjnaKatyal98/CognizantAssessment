@@ -1,0 +1,39 @@
+.parent:has(> :last-child:nth-child(1)){
+    --color:var(--purple);
+}
+
+.parent:has(> :last-child:nth-child(even)){
+    --color:var(--green);
+}
+
+.parent:has(> :last-child:nth-child(3)){
+    background-color: hsl(var(--red)/.3);
+}
+
+.parent:has(> :last-child:nth-child(5)){
+    background-color: hsl(var(--yellow)/.3);
+}
+
+:root{
+    --red: 0 50% 50%;
+    --blue: 220 50% 50%;
+    --green: 150 50% 50%;
+    --yellow : 45 80% 50%;
+    --purple: 250 50% 50%;
+}
+
+.parent{
+    display: flex;
+    gap:1rem;
+    padding: 1rem;
+    background-color: hsl(var(--color, 0 30% 100%));
+    border: 3px solid hsl(var(--color, 0 30% 100%));
+
+}
+
+.parent > div{
+    flex:1;
+    padding :2rem;
+    background-color: hsl(0 30% 100%);
+    border: 3px solid hsl(0 30% 100%);
+}
