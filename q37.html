@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Mouse</title>
+        <style>
+            p:hover{
+                    background-color: red;
+               }
+        </style>
+    </head>
+    <body class="geeks">
+        <div id="mouse"></div>
+        <p id="p1">some parah</p>
+        <script>
+            let div=document.querySelector(".geeks");
+            div.addEventListener(
+                "mousemove", function (e){
+                    x = e.offsetX;
+                    y = e.offsetY;
+                });
+        </script>
+        <script src="q37.js"></script>
+    </body>
+</html>
