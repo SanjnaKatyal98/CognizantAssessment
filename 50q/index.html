@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Websocket 1</title>
+    </head>
+    <body>
+        <div>
+            <button type="button" onclick="return start()">Start Connection</button>
+            <button type="button" onclick="return stop()">Stop Connection</button><br><br>
+        </div>
+        <div>
+            <span id="res"></span><br>
+        </div>
+        <div>
+            <input type="number" id="fst" placeholder="Enter first Number"><br><br>
+            <input type="number" id="scnd" placeholder="Enter Second Number"><br><br>
+            <select name="opr" id="opr">
+                <option value="add">+</option>
+                <option value="sub">-</option>
+                <option value="mul">*</option>
+                <option value="div">/</option>
+            </select><br><br>
+            <button type="button" onclick="return send()">Calculate</button>
+        </div>
+        <div></div>
+        <script>
+            let ws = null;
+            function start() {
+                console.log("Starting");
+                console.log(name);
+                ws = new WebSocket("ws://localhost:9000");
+                ws.addEventListener('open', () => {
+                    console.log("We are connected");
+                });
+                return false;
+            }
+    
+            function send() {
+                let fst = document.getElementById("fst").value;
+                let snd = document.getElementById("scnd").value;
+                let op = document.getElementById("opr").value;
+                console.log(fst + " " + scnd + " " + opr);
+                const msg = fst + " " + scnd + " " + opr;
+                ws.send(msg);
+                let res;
+                ws.onmessage = function (event) {
+                    alert(`Result is: ${event.data}`);
+                };
+            }
+    
+            function stop() {
+                if (ws == null) { return false; }
+                console.log("Client Disconnected");
+                ws.close();
+                return false;
+            }
+        </script>
+    </body>
+</html>
