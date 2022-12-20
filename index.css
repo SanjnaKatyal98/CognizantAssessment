@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+
+
+.contact-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+}
+
+.left {
+    height: 100%;
+    background: url("bg1.jpg");
+    background-size: cover;
+}
+
+.right {
+    padding: 20px 50px;
+}
+
+
+.one {
+    width: 120%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(150, 136, 136, 0.6);
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    width: 120%;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.adjust {
+    color: white;
+    position: absolute;
+    top: 8rem;
+    left: 20rem;
+}
+
+.adjustp {
+    color: white;
+    position: absolute;
+    top: 10rem;
+    left: 20rem;
+}
+
+.adjustT{
+    color: white;
+    position: absolute;
+    top: 20rem;
+    left: 20rem;
+}
+
+.adjustTp {
+    color: white;
+    position: absolute;
+    top: 22rem;
+    left: 20rem;
+}
+.adjustG{
+    color: white;
+    position: absolute;
+    top: 32rem;
+    left: 20rem;
+}
+
+.adjustGp {
+    color: white;
+    position: absolute;
+    top: 34rem;
+    left: 20rem;
+}
